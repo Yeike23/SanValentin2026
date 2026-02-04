@@ -25,11 +25,14 @@ body {
 }
 
 .big {
-  font-size: 28px;
+  font-size: 26px;
+  padding-top: 40vh;
 }
 
+/* PANTALLA INICIAL */
 #question {
   text-align: center;
+  z-index: 2;
 }
 
 .buttons {
@@ -56,11 +59,23 @@ button {
   position: absolute;
 }
 
+/* GIF */
+.gif-container {
+  margin: 20px auto;
+}
+
+.gif-container img {
+  width: 220px;
+  max-width: 80%;
+  border-radius: 16px;
+  box-shadow: 4px 4px 0 #000;
+}
+
+/* ESCENA FINAL */
 .hidden {
   display: none;
 }
 
-/* ESCENA ROMÁNTICA */
 #scene {
   position: absolute;
   inset: 0;
@@ -68,9 +83,11 @@ button {
   background-size: cover;
 }
 
+/* CORAZONES */
 .hearts img {
   position: absolute;
   width: 32px;
+  image-rendering: pixelated;
   animation: float 6s linear infinite;
 }
 
@@ -84,5 +101,3 @@ button {
     opacity: 0;
   }
 }
-
-
