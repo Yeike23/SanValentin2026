@@ -18,3 +18,16 @@ yes.addEventListener("click", () => {
   scene.classList.remove("hidden");
   spawnHearts();
 });
+
+// CORAZONES PIXEL
+function spawnHearts() {
+  setInterval(() => {
+    const heart = document.createElement("img");
+    heart.src = "hearts.png";
+    heart.style.left = Math.random() * window.innerWidth + "px";
+    heart.style.animationDuration = 3 + Math.random() * 3 + "s";
+    heartsContainer.appendChild(heart);
+
+    setTimeout(() => heart.remove(), 6000);
+  }, 180);
+}
