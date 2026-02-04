@@ -1,33 +1,18 @@
-const yes = document.getElementById("yes");
-const no = document.getElementById("no");
-const question = document.getElementById("question");
-const scene = document.getElementById("scene");
-const heartsContainer = document.querySelector(".hearts");
+const container = document.querySelector(".hearts");
 
-// BOTÓN NO HUYE
-no.addEventListener("mouseover", () => {
-  const x = Math.random() * (window.innerWidth - 120);
-  const y = Math.random() * (window.innerHeight - 60);
-  no.style.left = `${x}px`;
-  no.style.top = `${y}px`;
-});
+function createHeart() {
+  const heart = document.createElement("div");
+  heart.classList.add("heart");
 
-// BOTÓN SÍ
-yes.addEventListener("click", () => {
-  question.classList.add("hidden");
-  scene.classList.remove("hidden");
-  spawnHearts();
-});
+  heart.style.left = Math.random() * 100 + "vw";
+  heart.style.animationDuration = 5 + Math.random() * 5 + "s";
+  heart.style.opacity = Math.random();
 
-// CORAZONES PIXEL
-function spawnHearts() {
-  setInterval(() => {
-    const heart = document.createElement("img");
-    heart.src = "hearts.png";
-    heart.style.left = Math.random() * window.innerWidth + "px";
-    heart.style.animationDuration = 3 + Math.random() * 3 + "s";
-    heartsContainer.appendChild(heart);
+  container.appendChild(heart);
 
-    setTimeout(() => heart.remove(), 6000);
-  }, 180);
+  setTimeout(() => {
+    heart.remove();
+  }, 10000);
 }
+
+setInterval(createHeart, 200);
