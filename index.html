@@ -1,19 +1,38 @@
-<div id="question">
-  <h1 class="pixel-text">¿Quieres ser mi San Valentín?</h1>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>¿Quieres ser mi San Valentín? 💘</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-  <!-- GIF debajo de la pregunta -->
-  <div class="gif-container">
-    <img
-      src="https://media.tenor.com/ZhNxfL0GmoMAAAAj/mocha-bear-hearts.gif"
-      alt="Mocha Bear Hearts"
-    />
+  <!-- PANTALLA 1 -->
+  <div id="question">
+    <h1 class="pixel-text">¿Quieres ser mi San Valentín?</h1>
+
+    <!-- GIF -->
+    <div class="gif-container">
+      <img src="https://media.tenor.com/ZhNxfL0GmoMAAAAj/mocha-bear-hearts.gif" alt="Mocha Bear">
+    </div>
+
+    <div class="buttons">
+      <button id="yes">Sí 💖</button>
+      <button id="no">No 😅</button>
+    </div>
   </div>
 
-  <div class="buttons">
-    <button id="yes">Sí 💖</button>
-    <button id="no">No 😅</button>
+  <!-- PANTALLA 2 -->
+  <div id="scene" class="hidden">
+    <div class="hearts"></div>
+    <p class="pixel-text big">
+      Cada corazón es un te amo<br>
+      que solo te pertenece a ti
+    </p>
   </div>
-</div>
 
+  <script src="script.js"></script>
+</body>
+</html>
 
 
