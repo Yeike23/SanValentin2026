@@ -29,8 +29,7 @@ function init() {
 			container.addChild(heart);
 		}
 
-var text = new createjs.Text("Feliz San Valentin Manu ❤️
-							 Te amo", "bold 24px Arial", "#fff");
+var text = new createjs.Text("Feliz San Valentin Manu ❤️", "bold 24px Arial", "#fff");
   text.textAlign = "center";
   text.x = w / 2;
   text.y = h / 2 - text.getMeasuredLineHeight();
