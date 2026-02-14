@@ -29,11 +29,13 @@ function init() {
 			container.addChild(heart);
 		}
 
-  var text = new createjs.Text("Feliz San Valentin Manu ❤️", "bold 24px Arial", "#fff");
-  text.textAlign = "center";
-  text.x = w / 2;
-  text.y = h / 2 - text.getMeasuredLineHeight();
-  stage.addChild(text);
+ var text = new createjs.Text(
+  "Feliz San Valentin Manu ❤️",
+  "bold 28px Minecraft",
+  "#ffffff"
+);
+
+text.shadow = new createjs.Shadow("#000", 3, 3, 0);;
 
   for (i = 0; i < 100; i++) {
     var captureContainer = new createjs.Container();
